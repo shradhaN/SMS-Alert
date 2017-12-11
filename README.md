@@ -2,9 +2,22 @@
 SMS alert using http://www.meet.net.np
 
 
-install selenium using 
+## Dependancies
+Install selenium using 
 
+```
 pip install selenium
 
-download appropriate selenium driver here:
-http://www.seleniumhq.org/
+```
+
+Download appropriate selenium driver [here](http://www.seleniumhq.org/)
+
+
+## Setup
+- Create a copy of `config_sample.py`. Name it `config.py`.
+- Add two usernames and passwords in config.py
+
+## Usage
+```
+python meetalert.py
+```
