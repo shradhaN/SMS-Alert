@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from config import accounts
 
 import time
 
@@ -25,7 +26,7 @@ def login(username,password,group):
 	driver.find_element_by_id("loginImage").click()
 	time.sleep(1)
 
-	
+
 	#Send Message
 	driver.get("http://www.meet.net.np/meet/sms/sms")
 	driver.find_element_by_name("sendsmsbutton").click()
@@ -37,9 +38,8 @@ def login(username,password,group):
 	time.sleep(1)
 	driver.quit()
 
-login('shradhaN', 'Hello1234', group1)
+login(accounts[0]['username'], accounts[0]['password'], group1)
 time.sleep(1)
-#reopen the browser with new username and password
-login('Anushka12', 'Smileanna', group2)
 
-
+# Reopen the browser with new username and password
+login(accounts[1]['username'], accounts[1]['password'], group2)
